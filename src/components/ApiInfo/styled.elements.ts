@@ -8,16 +8,16 @@ export const ApiInfoWrap = MiddlePanel;
 export const ApiHeader = styled(H1)`
   margin-top: 0;
   margin-bottom: 0.5em;
+  font-weight: bold;
 
   ${extensionsHook('ApiHeader')};
 `;
 
 export const DownloadButton = styled.a`
-  border: 1px solid ${props => props.theme.colors.primary.main};
   color: ${props => props.theme.colors.primary.main};
   font-weight: normal;
   margin-left: 0.5em;
-  padding: 4px 8px 4px;
+  padding: 4px 4px 4px;
   display: inline-block;
   text-decoration: none;
   cursor: pointer;

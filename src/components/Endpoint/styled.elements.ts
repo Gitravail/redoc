@@ -49,10 +49,12 @@ export const HttpVerb = styled.span.attrs((props: { type: string; compact?: bool
   line-height: ${props => (props.compact ? '18px' : '20px')};
   background-color: ${props => props.theme.colors.http[props.type] || '#999999'};
   color: #ffffff;
+  font-weight: bold;
   padding: ${props => (props.compact ? '2px 8px' : '3px 10px')};
   text-transform: uppercase;
   font-family: ${props => props.theme.typography.headings.fontFamily};
   margin: 0;
+  border-radius: 25px;
 `;
 
 export const ServersOverlay = styled.div<{ expanded: boolean }>`

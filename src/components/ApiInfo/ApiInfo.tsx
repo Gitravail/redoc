@@ -15,6 +15,8 @@ import {
   InfoSpanBoxWrap,
 } from './styled.elements';
 
+import { FaDownload } from 'react-icons/fa';
+
 export interface ApiInfoProps {
   store: AppStore;
 }
@@ -79,14 +81,14 @@ export class ApiInfo extends React.Component<ApiInfoProps> {
             </ApiHeader>
             {!hideDownloadButton && (
               <p>
-                Download OpenAPI specification:
+                Download OpenAPI specification
                 <DownloadButton
                   download={downloadFilename || true}
                   target="_blank"
                   href={downloadLink}
                   onClick={this.handleDownloadClick}
                 >
-                  Download
+                  <span style={{color: "#0098fe"}}><FaDownload /></span>
                 </DownloadButton>
               </p>
             )}

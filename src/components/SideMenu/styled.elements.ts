@@ -12,7 +12,7 @@ export const OperationBadge = styled.span.attrs((props: { type: string }) => ({
   height: ${props => props.theme.typography.code.fontSize};
   line-height: ${props => props.theme.typography.code.fontSize};
   background-color: #333;
-  border-radius: 3px;
+  border-radius: 10px;
   background-repeat: no-repeat;
   background-position: 6px 4px;
   font-size: 7px;
@@ -137,7 +137,7 @@ export const MenuItemLabel = styled.label.attrs((props: MenuItemLabelType) => ({
   ${({ depth, type, theme }) =>
     (type === 'section' && depth > 1 && 'padding-left: ' + theme.spacing.unit * 8 + 'px;') || ''}
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   font-family: ${props => props.theme.typography.headings.fontFamily};
   ${props => menuItemDepth[props.depth]};
   background-color: ${props => (props.active ? menuItemActiveBg(props.depth, props) : '')};

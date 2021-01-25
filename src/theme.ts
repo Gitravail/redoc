@@ -14,25 +14,25 @@ const defaultTheme: ThemeInterface = {
   colors: {
     tonalOffset: 0.2,
     primary: {
-      main: '#32329f',
+      main: '#111111',
       light: ({ colors }) => lighten(colors.tonalOffset, colors.primary.main),
       dark: ({ colors }) => darken(colors.tonalOffset, colors.primary.main),
       contrastText: ({ colors }) => readableColor(colors.primary.main),
     },
     success: {
-      main: '#1d8127',
+      main: '#61b178',
       light: ({ colors }) => lighten(colors.tonalOffset * 2, colors.success.main),
       dark: ({ colors }) => darken(colors.tonalOffset, colors.success.main),
       contrastText: ({ colors }) => readableColor(colors.success.main),
     },
     warning: {
-      main: '#ffa500',
+      main: '#f6ce70',
       light: ({ colors }) => lighten(colors.tonalOffset, colors.warning.main),
       dark: ({ colors }) => darken(colors.tonalOffset, colors.warning.main),
       contrastText: '#ffffff',
     },
     error: {
-      main: '#d41f1c',
+      main: '#f67070',
       light: ({ colors }) => lighten(colors.tonalOffset, colors.error.main),
       dark: ({ colors }) => darken(colors.tonalOffset, colors.error.main),
       contrastText: ({ colors }) => readableColor(colors.error.main),
@@ -66,21 +66,21 @@ const defaultTheme: ThemeInterface = {
         tabTextColor: ({ colors }) => colors.responses.redirect.color,
       },
       info: {
-        color: '#87ceeb',
+        color: '#0098fe',
         backgroundColor: ({ colors }) => transparentize(0.9, colors.responses.info.color),
         tabTextColor: ({ colors }) => colors.responses.info.color,
       },
     },
     http: {
-      get: '#2F8132',
-      post: '#186FAF',
-      put: '#95507c',
-      options: '#947014',
-      patch: '#bf581d',
-      delete: '#cc3333',
+      get: '#61b178',
+      post: '#0098fe',
+      put: '#8570f6',
+      options: '#f6ce70',
+      patch: '#f69270',
+      delete: '#f67070',
       basic: '#707070',
-      link: '#07818F',
-      head: '#A23DAD',
+      link: '#75a5ff',
+      head: '#ba75ff',
     },
   },
   schema: {
@@ -95,28 +95,28 @@ const defaultTheme: ThemeInterface = {
     requireLabelColor: theme => theme.colors.error.main,
     labelsTextSize: '0.9em',
     nestingSpacing: '1em',
-    nestedBackground: '#fafafa',
+    nestedBackground: '#f4f6fc',
     arrow: {
-      size: '1.1em',
+      size: '1.2em',
       color: theme => theme.colors.text.secondary,
     },
   },
   typography: {
     fontSize: '14px',
     lineHeight: '1.5em',
-    fontWeightRegular: '400',
-    fontWeightBold: '600',
-    fontWeightLight: '300',
-    fontFamily: 'Roboto, sans-serif',
+    fontWeightRegular: '300',
+    fontWeightBold: '500',
+    fontWeightLight: '200',
+    fontFamily: 'Regular, sans-serif',
     smoothing: 'antialiased',
     optimizeSpeed: true,
     headings: {
       fontFamily: 'Montserrat, sans-serif',
-      fontWeight: '400',
+      fontWeight: '300',
       lineHeight: '1.6em',
     },
     code: {
-      fontSize: '13px',
+      fontSize: '14px',
       fontFamily: 'Courier, monospace',
       lineHeight: ({ typography }) => typography.lineHeight,
       fontWeight: ({ typography }) => typography.fontWeightRegular,
@@ -125,19 +125,16 @@ const defaultTheme: ThemeInterface = {
       wrap: false,
     },
     links: {
-      color: ({ colors }) => colors.primary.main,
+      color: ({ colors }) => colors.http.link,
       visited: ({ typography }) => typography.links.color,
-      hover: ({ typography }) => lighten(0.2, typography.links.color),
+      hover: ({ typography }) => lighten(0.05, typography.links.color),
     },
   },
   sidebar: {
     width: '260px',
-    backgroundColor: '#fafafa',
+    backgroundColor: '#ffffff',
     textColor: '#333333',
-    activeTextColor: theme =>
-      theme.sidebar.textColor !== defaultTheme.sidebar!.textColor
-        ? theme.sidebar.textColor
-        : theme.colors.primary.main,
+    activeTextColor: '#000000',
     groupItems: {
       textTransform: 'uppercase',
     },
@@ -155,12 +152,12 @@ const defaultTheme: ThemeInterface = {
     gutter: '2px',
   },
   rightPanel: {
-    backgroundColor: '#263238',
-    width: '40%',
+    backgroundColor: '#2b313d',
+    width: '45%',
     textColor: '#ffffff',
   },
   codeBlock: {
-    backgroundColor: ({ rightPanel }) => darken(0.1, rightPanel.backgroundColor),
+    backgroundColor: '#0f1625',
   },
 };
 

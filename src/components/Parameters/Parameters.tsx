@@ -73,10 +73,10 @@ export function BodyContent(props: { content: MediaContentModel; description?: s
     <MediaTypesSwitch content={content} renderDropdown={DropdownWithinHeader}>
       {({ schema }) => {
         return (
-          <>
+          <div style={{backgroundColor:"#f2f4fc"}}>
             {description !== undefined && <Markdown source={description} />}
             <Schema skipReadOnly={true} key="schema" schema={schema} />
-          </>
+          </div>
         );
       }}
     </MediaTypesSwitch>
