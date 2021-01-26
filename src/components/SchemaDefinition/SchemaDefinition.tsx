@@ -57,7 +57,7 @@ export class SchemaDefinition extends React.PureComponent<ObjectDescriptionProps
     return (
       <Section>
         <Row>
-          <MiddlePanel style={{backgroundColor:"#f2f4fc"}}>
+          <MiddlePanel style={{backgroundColor:"#f2f4fc", borderRadius:"10px", padding:"30px", margin:"30px"}}>
             <Schema
               skipWriteOnly={!showWriteOnly}
               skipReadOnly={!showReadOnly}

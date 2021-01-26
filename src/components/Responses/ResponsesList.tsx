@@ -3,12 +3,15 @@ import { ResponseModel } from '../../services/models';
 import styled from '../../styled-components';
 import { ResponseView } from './Response';
 
+import { FaReply } from 'react-icons/fa';
+
 const ResponsesHeader = styled.h3`
   font-size: 1.3em;
   padding: 0.2em 0;
   margin: 3em 0 1.1em;
   color: ${({ theme }) => theme.colors.text.primary};
   font-weight: normal;
+  border-radius: 10px;
 `;
 
 export interface ResponseListProps {
@@ -26,7 +29,10 @@ export class ResponsesList extends React.PureComponent<ResponseListProps> {
 
     return (
       <div>
-        <ResponsesHeader>{isCallback ? 'Callback responses' : 'Responses'}</ResponsesHeader>
+        <ResponsesHeader>
+          <span style={{color: "#333333", marginRight: "5px"}}><FaReply /></span>
+          {isCallback ? 'Callback responses' : 'Responses'}
+        </ResponsesHeader>
         {responses.map(response => {
           return <ResponseView key={response.code} response={response} />;
         })}

@@ -32,6 +32,7 @@ export class MenuItems extends React.Component<MenuItemsProps> {
           <MenuItem key={idx} item={item} onActivate={this.props.onActivate} />
         ))}
       </MenuItemUl>
+
     );
   }
 }

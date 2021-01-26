@@ -131,7 +131,7 @@ const defaultTheme: ThemeInterface = {
     },
   },
   sidebar: {
-    width: '260px',
+    width: '320px',
     backgroundColor: '#ffffff',
     textColor: '#333333',
     activeTextColor: '#000000',

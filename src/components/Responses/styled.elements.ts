@@ -10,7 +10,7 @@ export const StyledResponseTitle = styled(ResponseTitle)`
   width: 100%;
   text-align: left;
   padding: 10px;
-  border-radius: 2px;
+  border-radius: 10px;
   margin-bottom: 4px;
   line-height: 1.5em;
   background-color: #f2f2f2;

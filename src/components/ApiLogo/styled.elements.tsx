@@ -5,7 +5,7 @@ export const LogoImgEl = styled.img`
   max-height: ${props => props.theme.logo.maxHeight};
   max-width: ${props => props.theme.logo.maxWidth};
   padding: ${props => props.theme.logo.gutter};
-  width: 100%;
+  width: 33%;
   display: block;
 `;
 

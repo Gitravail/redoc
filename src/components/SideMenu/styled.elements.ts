@@ -79,9 +79,8 @@ function menuItemActiveBg(depth, { theme }: { theme: ResolvedThemeInterface }): 
 export const MenuItemUl = styled.ul<{ expanded: boolean }>`
   margin: 0;
   padding: 0;
-
   & & {
-    font-size: 0.929em;
+    font-size: 1em;
   }
 
   ${props => (props.expanded ? '' : 'display: none;')};
@@ -97,15 +96,16 @@ export const MenuItemLi = styled.li<{ depth: number }>`
 
 export const menuItemDepth = {
   0: css`
-    opacity: 0.7;
+    opacity: 1;
     text-transform: ${({ theme }) => theme.sidebar.groupItems.textTransform};
-    font-size: 0.8em;
+    font-size: 1em;
+    font-weight: bold;
     padding-bottom: 0;
     cursor: default;
     color: ${props => props.theme.sidebar.textColor};
   `,
   1: css`
-    font-size: 0.929em;
+    font-size: 1em;
     text-transform: ${({ theme }) => theme.sidebar.level1Items.textTransform};
     &:hover {
       color: ${props => props.theme.sidebar.activeTextColor};
@@ -151,6 +151,7 @@ export const MenuItemLabel = styled.label.attrs((props: MenuItemLabelType) => ({
   ${ShelfIcon} {
     height: ${({ theme }) => theme.sidebar.arrow.size};
     width: ${({ theme }) => theme.sidebar.arrow.size};
+    margin-right: 15px;
     polygon {
       fill: ${({ theme }) => theme.sidebar.arrow.color};
     }

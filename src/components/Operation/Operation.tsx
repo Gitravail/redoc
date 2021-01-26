@@ -17,6 +17,7 @@ import { RequestSamples } from '../RequestSamples/RequestSamples';
 import { ResponsesList } from '../Responses/ResponsesList';
 import { ResponseSamples } from '../ResponseSamples/ResponseSamples';
 import { SecurityRequirements } from '../SecurityRequirement/SecurityRequirement';
+import { OperationTile } from './styled.elements';
 
 const OperationRow = styled(Row)`
   backface-visibility: hidden;
@@ -47,6 +48,7 @@ export class Operation extends React.Component<OperationProps> {
             <MiddlePanel>
               <H2>
                 <ShareLink to={operation.id} />
+                <OperationTile>Operation</OperationTile>
                 {summary} {deprecated && <Badge type="warning"> Deprecated </Badge>}
                 {isWebhook && <Badge type="primary"> Webhook </Badge>}
               </H2>
