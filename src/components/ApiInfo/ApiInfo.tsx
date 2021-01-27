@@ -15,7 +15,8 @@ import {
   InfoSpanBoxWrap,
 } from './styled.elements';
 
-import { FaDownload } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
 
 export interface ApiInfoProps {
   store: AppStore;
@@ -88,7 +89,7 @@ export class ApiInfo extends React.Component<ApiInfoProps> {
                   href={downloadLink}
                   onClick={this.handleDownloadClick}
                 >
-                  <span style={{color: "#0098fe"}}><FaDownload /></span>
+                  <span style={{color: "#0098fe"}}><FontAwesomeIcon icon={faDownload} /></span>
                 </DownloadButton>
               </p>
             )}

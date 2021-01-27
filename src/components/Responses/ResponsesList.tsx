@@ -3,7 +3,8 @@ import { ResponseModel } from '../../services/models';
 import styled from '../../styled-components';
 import { ResponseView } from './Response';
 
-import { FaReply } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faReply } from '@fortawesome/free-solid-svg-icons'
 
 const ResponsesHeader = styled.h3`
   font-size: 1.3em;
@@ -30,7 +31,7 @@ export class ResponsesList extends React.PureComponent<ResponseListProps> {
     return (
       <div>
         <ResponsesHeader>
-          <span style={{color: "#333333", marginRight: "5px"}}><FaReply /></span>
+          <span style={{color: "#333333", marginRight: "5px"}}><FontAwesomeIcon icon={faReply} /></span>
           {isCallback ? 'Callback responses' : 'Responses'}
         </ResponsesHeader>
         {responses.map(response => {
